@@ -1,10 +1,6 @@
 {
   "name": "Tempe Commercial Cleaning",
   "version": 2,
-  "env": {
-    "CONTACT_EMAIL": "@contact_email",
-    "NEXT_PUBLIC_SITE_URL": "@site_url"
-  },
   "functions": {
     "api/submit-quote.js": {
       "maxDuration": 30,
