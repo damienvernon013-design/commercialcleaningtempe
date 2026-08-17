@@ -1,0 +1,59 @@
+{
+  "name": "Tempe Commercial Cleaning",
+  "version": 2,
+  "public": true,
+  "env": {
+    "CONTACT_EMAIL": "@contact_email",
+    "NEXT_PUBLIC_SITE_URL": "@site_url"
+  },
+  "functions": {
+    "api/submit-quote.js": {
+      "maxDuration": 30,
+      "memory": 512
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/quote",
+      "destination": "/request-a-quote/",
+      "permanent": true
+    },
+    {
+      "source": "/quote-request",
+      "destination": "/request-a-quote/",
+      "permanent": true
+    }
+  ]
+}
