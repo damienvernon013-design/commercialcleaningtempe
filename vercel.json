@@ -1,7 +1,6 @@
 {
   "name": "Tempe Commercial Cleaning",
   "version": 2,
-  "public": true,
   "env": {
     "CONTACT_EMAIL": "@contact_email",
     "NEXT_PUBLIC_SITE_URL": "@site_url"
